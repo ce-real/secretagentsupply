@@ -1,0 +1,31 @@
+html{
+  font-size: 18px;
+}
+
+*{
+  font-color: white;
+}
+
+.site{
+  display: flex;
+  max-width: 960px;
+  flex: 5 5 auto;
+}
+
+header{
+  background-color: black;
+}
+
+header img{
+  height: 1.5rem;
+  width: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.66rem;
+}
+
+header h2{
+  font-family: Helvetica;
+  font-size: 1rem;
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
+}

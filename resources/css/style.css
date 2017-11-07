@@ -31,6 +31,10 @@ html{
   width: 960px;
 }
 
+.op2{
+  display: none;
+}
+
 .backimg{
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   width: 100%;
@@ -109,13 +113,15 @@ nav{
 
 .items{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   width: 960px;
   justify-content: space-between;
   margin: 0px auto;
 }
 
 .pen, .watch, .glasses{
+  display: flex;
+  flex-direction: column;
   margin-top: 3rem;
   margin-bottom: 3rem;
   border: 4px solid black;
@@ -126,8 +132,9 @@ nav{
 }
 
 .imgback img{
-  height: 9rem;
-  max-width: 100%;
+  max-height: 5.5rem;
+  max-width: 55%;
+  margin: 0px auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
   justify-content: center;
@@ -150,9 +157,9 @@ nav{
 .info{
   display: flex;
   width: 960px;
+  margin: 0px auto;
   flex-direction: row;
-  justify-content: center;
-  padding-bottom: 4rem;
+  justify-content: space-between;
 }
 
 .location, .hours{
@@ -168,17 +175,32 @@ nav{
   padding: 2rem 1rem auto 1rem;
 }
 
+.location{
+  margin-right: 15%;
+}
+
+.hours{
+  margin-left: 15%;
+}
+
+.location h3, .hours h3{
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 2rem 1rem auto 1rem;
+}
+
 .details{
   background-color: white;
   color: black;
 }
 
-.footer{
+footer{
   display: flex;
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   justify-content: center;
   background-color: black;
+  padding-top: 4rem;
 }
 
 .foot-container{
@@ -192,4 +214,64 @@ nav{
   color: white;
   font-size: 1rem;
   font-weight: normal;
+}
+
+/* Tablet layout */
+
+@media only screen and (max-width: 1024px){
+  .headline h2{
+    font-size: 0.9rem;
+  }
+  .headline h1{
+    font-size: 1.5rem;
+  }
+  .op{
+    display: none;
+  }
+  .op2{
+    display: inline;
+    font-weight: bold;
+    color: white;
+    margin: 0px auto;
+  }
+  .glasses{
+    display: none;
+  }
+  .pen, .watch{
+    max-width: 47%;
+  }
+}
+
+/* Mobile layout */
+
+@media only screen and (max-width: 470px){
+  .headline h2{
+    font-size: 0.77rem;
+    padding-top: 1rem;
+  }
+  .headline h1{
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+  .headline{
+    margin-top: 10rem;
+  }
+  .backimg{
+    height: 15rem;
+  }
+  .watch{
+    display: none;
+  }
+  .pen{
+    width: 90%;
+  }
+  .info{
+    flex-flow: column wrap;
+  }
+  .location, .hours{
+    width: 90%;
+  }
+  footer{
+    justify-content: center;
+  }
 }

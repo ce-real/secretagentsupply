@@ -248,31 +248,34 @@ footer{
 /* Mobile layout */
 
 @media only screen and (max-width: 470px){
-  main .items, main .info{
-    width: 100%;
-  }
-  .lgr-container{
-    align-items: center;
-  }
   .headline h2{
     font-size: 0.77rem;
-    padding-top: 1rem;
   }
   .headline h1{
     font-size: 1rem;
-    padding-left: 2rem;
   }
   .headline{
-    max-height: 5rem;
+    margin-top: 2rem;
+    height: auto;
+    width: 100%;
+    padding-top: 0px;
+    padding-left: 3rem;
   }
   .backimg{
-    max-height: 15rem;
+    height: 15rem;
   }
   .watch{
     display: none;
   }
   .pen{
     min-width: 90%;
+    height: 15rem;
+  }
+  .pen h3{
+    margin: 0px auto;
+  }
+  main .items, main .info{
+    width: 100%;
   }
   .info{
     flex-flow: column wrap;
@@ -281,8 +284,8 @@ footer{
     width: 90%;
     margin: 0px auto;
   }
-  .location h3{
-    margin-bottom: 0.5rem;
+  .foot-container{
+    justify-content: center;
   }
   footer{
     justify-content: center;
